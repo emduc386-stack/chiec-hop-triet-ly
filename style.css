@@ -80,3 +80,48 @@ button:hover{
     background:#2f73ff;
 
 }
+.container{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:1s;
+
+}
+
+.container.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+.logo{
+
+    animation:float 3s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
