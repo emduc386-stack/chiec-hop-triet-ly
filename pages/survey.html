@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Khảo sát</title>
+<title>Cuộc trò chuyện đầu tiên</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="../style.css">
 
@@ -16,28 +21,39 @@
 
 <div class="container">
 
-<h1>📝 Khảo sát</h1>
+<p class="step">
 
-<p class="desc">
-
-Hãy trả lời 5 câu hỏi ngắn.
-
-Điều này sẽ giúp Chiếc Hộp Triết Lý
-lựa chọn thông điệp phù hợp hơn.
+Bước <span id="currentStep">1</span>/7
 
 </p>
 
-<a href="#">
+<div class="progress">
 
-<button>
+<div id="progressBar"></div>
 
-Bắt đầu khảo sát
+</div>
+
+<h2 id="question">
+
+Đang tải...
+
+</h2>
+
+<div id="answers">
+
+</div>
+
+<button id="nextBtn">
+
+Tiếp tục
 
 </button>
 
-</a>
-
 </div>
+
+<script src="../data/questions.js"></script>
+
+<script src="../survey.js"></script>
 
 </body>
 
