@@ -292,16 +292,28 @@ button:hover{
     outline:none;
 
 }
+@keyframes breathe{
+
+0%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.05);
+}
+
+100%{
+transform:scale(1);
+}
+
+}
+
 .boxLogo{
 
 width:150px;
 
-transition:.4s;
+animation:breathe 3s infinite ease-in-out;
 
-}
-
-.boxLogo:hover{
-
-transform:scale(1.05);
+transition:.3s;
 
 }
