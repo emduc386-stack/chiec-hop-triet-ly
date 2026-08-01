@@ -83,3 +83,39 @@ function loadQuestion(){
 }
 
 loadQuestion();
+nextBtn.addEventListener("click",()=>{
+
+    if(selectedAnswer===null || selectedAnswer===""){
+
+        alert("Hãy chọn hoặc nhập câu trả lời trước nhé 🌱");
+
+        return;
+
+    }
+
+    userAnswers.push({
+
+        id:questions[currentQuestion].id,
+
+        answer:selectedAnswer
+
+    });
+
+    currentQuestion++;
+
+    if(currentQuestion<questions.length){
+
+        loadQuestion();
+
+    }else{
+
+        localStorage.setItem(
+            "surveyAnswers",
+            JSON.stringify(userAnswers)
+        );
+
+        window.location.href="message.html";
+
+    }
+
+});
