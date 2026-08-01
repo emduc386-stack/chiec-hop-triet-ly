@@ -53,14 +53,23 @@ const box=document.getElementById("magicBox");
 const light=document.getElementById("lightEffect");
 const button=document.getElementById("openBoxBtn");
 
-button.onclick=()=>{
+button.onclick = () => {
 
-light.classList.add("active");
+    button.disabled = true;
 
-box.style.transform="scale(1.08)";
+    button.innerText = "Đang mở...";
+
+    light.classList.add("active");
+
+    box.classList.add("shake");
+
+    setTimeout(() => {
+
+        box.classList.remove("shake");
+
+    }, 500);
 
 };
-
 </script>
 
 
