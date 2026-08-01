@@ -17,28 +17,44 @@ content="width=device-width, initial-scale=1.0">
 <body>
 
 <div class="container">
+<div class="boxContainer">
 
-<h1 style="font-size:90px;">
-📦
-</h1>
-
-<h2>
-
-Chiếc Hộp Triết Lý
-
-</h2>
-
-<p class="desc">
-
-Build 005
-
-Hiệu ứng mở hộp
-sẽ được xây dựng tại đây.
-
-</p>
+    <img
+        src="../assets/images/box.svg"
+        class="boxLogo"
+        id="magicBox"
+        alt="Chiếc Hộp Triết Lý">
 
 </div>
 
+<h2>Chiếc Hộp Triết Lý</h2>
+
+<p class="desc">
+Nhấn nút bên dưới để mở chiếc hộp.
+</p>
+
+<button id="openBoxBtn">
+Mở chiếc hộp
+</button>
+
+
+</div>
+<script>
+
+const box = document.getElementById("magicBox");
+const button = document.getElementById("openBoxBtn");
+
+button.onclick = () => {
+
+    box.style.transform = "scale(1.15)";
+
+    setTimeout(() => {
+        box.style.transform = "scale(1)";
+    }, 300);
+
+};
+
+</script>
 </body>
 
 </html>
