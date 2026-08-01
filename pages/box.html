@@ -16,48 +16,55 @@ content="width=device-width, initial-scale=1.0">
 
 <body>
 
+
 <div class="container">
+
 <div class="boxContainer">
 
+<img
+src="../assets/images/box.svg"
+class="boxLogo"
+id="magicBox"
+alt="Chiếc Hộp Triết Lý">
 
-    <img
-    src="../assets/images/box.svg"
-    class="boxLogo"
-    id="magicBox"
-    alt="Chiếc Hộp Triết Lý">
-
-    <div id="lightEffect"></div>
-
-</div>
+<div id="lightEffect"></div>
 
 </div>
 
-<h2>Chiếc Hộp Triết Lý</h2>
+<h1>Chiếc Hộp Triết Lý</h1>
 
 <p class="desc">
+
 Nhấn nút bên dưới để mở chiếc hộp.
+
 </p>
 
 <button id="openBoxBtn">
+
 Mở chiếc hộp
+
 </button>
 
-
 </div>
+
 <script>
 
-const box = document.getElementById("magicBox");
-const light = document.getElementById("lightEffect");
-const button = document.getElementById("openBoxBtn");
+const box=document.getElementById("magicBox");
+const light=document.getElementById("lightEffect");
+const button=document.getElementById("openBoxBtn");
 
-button.onclick = () => {
+button.onclick=()=>{
 
-    light.classList.add("active");
+light.classList.add("active");
 
-    box.style.transform = "scale(1.08)";
+box.style.transform="scale(1.08)";
 
 };
+
 </script>
+
+
+
 </body>
 
 </html>
