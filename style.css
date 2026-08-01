@@ -317,3 +317,10 @@ animation:breathe 3s infinite ease-in-out;
 transition:.3s;
 
 }
+.boxLogo:hover{
+
+transform:scale(1.08);
+
+filter:drop-shadow(0 0 18px #60A5FA);
+
+}
