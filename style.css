@@ -390,3 +390,30 @@ transform:scale(1.08);
 filter:drop-shadow(0 0 18px #60A5FA);
 
 }
+#lightEffect{
+
+position:absolute;
+
+width:160px;
+
+height:160px;
+
+background:#60A5FA;
+
+border-radius:50%;
+
+filter:blur(40px);
+
+opacity:0;
+
+transition:.5s;
+
+z-index:-1;
+
+}
+
+#lightEffect.active{
+
+opacity:.6;
+
+}
