@@ -292,3 +292,16 @@ button:hover{
     outline:none;
 
 }
+.boxLogo{
+
+width:150px;
+
+transition:.4s;
+
+}
+
+.boxLogo:hover{
+
+transform:scale(1.05);
+
+}
