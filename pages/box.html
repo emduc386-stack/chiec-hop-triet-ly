@@ -19,7 +19,6 @@ content="width=device-width, initial-scale=1.0">
 <div class="container">
 <div class="boxContainer">
 
-<div class="boxContainer">
 
     <img
     src="../assets/images/box.svg"
@@ -48,18 +47,16 @@ Mở chiếc hộp
 <script>
 
 const box = document.getElementById("magicBox");
+const light = document.getElementById("lightEffect");
 const button = document.getElementById("openBoxBtn");
 
 button.onclick = () => {
 
-    box.style.transform = "scale(1.15)";
+    light.classList.add("active");
 
-    setTimeout(() => {
-        box.style.transform = "scale(1)";
-    }, 300);
+    box.style.transform = "scale(1.08)";
 
 };
-
 </script>
 </body>
 
