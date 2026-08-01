@@ -96,3 +96,28 @@ transform:rotate(0deg);
 animation:shake .5s;
 
 }
+#paper{
+
+position:absolute;
+
+left:50%;
+
+top:40px;
+
+transform:translateX(-50%) scale(.2);
+
+font-size:70px;
+
+opacity:0;
+
+transition:1s;
+
+}
+
+#paper.show{
+
+opacity:1;
+
+transform:translateX(-50%) translateY(-90px) scale(1);
+
+}
