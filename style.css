@@ -82,7 +82,73 @@ body{
     }
 
     to{
+/* ================================
+   Magic Light
+================================ */
 
+.boxContainer{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:30px;
+
+}
+
+.boxContainer::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:140px;
+
+    height:140px;
+
+    background:#60A5FA;
+
+    border-radius:50%;
+
+    filter:blur(45px);
+
+    opacity:.35;
+
+    animation:magicGlow 2.8s ease-in-out infinite;
+
+}
+
+@keyframes magicGlow{
+
+0%{
+
+opacity:.20;
+
+transform:scale(.9);
+
+}
+
+50%{
+
+opacity:.55;
+
+transform:scale(1.15);
+
+}
+
+100%{
+
+opacity:.20;
+
+transform:scale(.9);
+
+}
+
+}
         opacity:1;
         transform:translateY(0);
 
