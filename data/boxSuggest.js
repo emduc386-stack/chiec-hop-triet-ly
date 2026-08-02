@@ -1,6 +1,6 @@
 function suggestBox(answers){
 
-    let scores = {
+    const scores = {
         philosophy:0,
         love:0,
         motivation:0,
@@ -9,24 +9,22 @@ function suggestBox(answers){
 
     answers.forEach(answer=>{
 
-        if(answer.includes("Bình yên")) scores.peace++;
+        if(!answer.score) return;
 
-        if(answer.includes("Động lực")) scores.motivation++;
+        for(const key in answer.score){
 
-        if(answer.includes("chia sẻ")) scores.love++;
+            scores[key] += answer.score[key];
 
-        if(answer.includes("Triết")) scores.philosophy++;
+        }
 
     });
 
     let best = "philosophy";
-    let max = scores.philosophy;
 
-    for(let key in scores){
+    for(const key in scores){
 
-        if(scores[key] > max){
+        if(scores[key] > scores[best]){
 
-            max = scores[key];
             best = key;
 
         }
