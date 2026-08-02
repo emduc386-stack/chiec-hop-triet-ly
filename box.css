@@ -181,3 +181,48 @@ transform:translateX(-50%) translateY(-90px) scale(1);
 
     transform:scale(1.08);
 }
+#sparkles{
+    position:absolute;
+    left:50%;
+    top:60px;
+    transform:translateX(-50%);
+    pointer-events:none;
+}
+
+#sparkles span{
+    position:absolute;
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:#ffe066;
+    opacity:0;
+}
+
+.sparkle span{
+    animation:spark 1s ease-out forwards;
+}
+
+#sparkles span:nth-child(1){left:-40px;}
+#sparkles span:nth-child(2){left:-20px;}
+#sparkles span:nth-child(3){left:0;}
+#sparkles span:nth-child(4){left:20px;}
+#sparkles span:nth-child(5){left:40px;}
+#sparkles span:nth-child(6){left:60px;}
+
+@keyframes spark{
+
+0%{
+opacity:0;
+transform:translateY(0) scale(.3);
+}
+
+30%{
+opacity:1;
+}
+
+100%{
+opacity:0;
+transform:translateY(-80px) scale(1.4);
+}
+
+}
