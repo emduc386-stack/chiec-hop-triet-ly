@@ -429,26 +429,13 @@ opacity:.6;
 }
 
 .optionBtn{
-
-    width:100%;
-
-    margin:12px 0;
-
-    padding:16px;
-
+    width:90%;
+    max-width:320px;
+    padding:18px;
+    font-size:24px;
     border:none;
-
-    border-radius:14px;
-
-    background:#ffffff22;
-
-    color:white;
-
-    font-size:20px;
-
-    cursor:pointer;
-
-    transition:.25s;
+    border-radius:18px;
+    margin:0;
 }
 
 .optionBtn:hover{
