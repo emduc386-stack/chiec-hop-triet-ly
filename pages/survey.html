@@ -46,23 +46,25 @@ function loadQuestion(){
 
     options.innerHTML="";
 
-    q.options.forEach(option=>{
+q.options.forEach(option=>{
 
-        const button =
-        document.createElement("button");
+    const button = document.createElement("button");
 
-        button.className="optionBtn";
+    button.className = "optionBtn";
 
-        button.innerText=option;
+    button.innerText = option.text;
 
-        button.onclick = function(){
+    button.onclick = function(){
 
-    answers[currentQuestion] = option;
+        answers[currentQuestion] = option;
 
-    nextQuestion();
+        nextQuestion();
 
-};
+    };
 
+    options.appendChild(button);
+
+});
         options.appendChild(button);
 
     });
