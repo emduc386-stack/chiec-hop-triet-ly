@@ -29,8 +29,57 @@
 </div>
 
 <script>
-
 let currentQuestion = 0;
+
+function loadQuestion(){
+
+    const q = questions[currentQuestion];
+
+    document.getElementById("questionNumber").innerText =
+    `Câu ${currentQuestion+1} / ${questions.length}`;
+
+    document.getElementById("questionText").innerText =
+    q.question;
+
+    const options =
+    document.getElementById("options");
+
+    options.innerHTML="";
+
+    q.options.forEach(option=>{
+
+        const button =
+        document.createElement("button");
+
+        button.className="optionBtn";
+
+        button.innerText=option;
+
+        button.onclick=nextQuestion;
+
+        options.appendChild(button);
+
+    });
+
+}
+
+function nextQuestion(){
+
+    currentQuestion++;
+
+    if(currentQuestion>=questions.length){
+
+        location.href="choose-box.html";
+
+        return;
+
+    }
+
+    loadQuestion();
+
+}
+
+loadQuestion();
 
 </script>
 
