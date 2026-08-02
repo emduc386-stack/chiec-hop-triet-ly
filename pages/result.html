@@ -37,8 +37,28 @@ Mở hộp khác
 </div>
 
 <script>
-const randomMessage =
-messages[Math.floor(Math.random() * messages.length)];
+const today = new Date().toDateString();
+
+let savedDate = localStorage.getItem("messageDate");
+let savedIndex = localStorage.getItem("messageIndex");
+
+let randomIndex;
+
+if(savedDate === today && savedIndex !== null){
+
+    randomIndex = Number(savedIndex);
+
+}else{
+
+    randomIndex = Math.floor(Math.random() * messages.length);
+
+    localStorage.setItem("messageDate", today);
+
+    localStorage.setItem("messageIndex", randomIndex);
+
+}
+
+const randomMessage = messages[randomIndex];
 
 const messageElement =
 document.getElementById("messageText");
