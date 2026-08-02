@@ -22,11 +22,34 @@ const questions = [
     type:"emotion",
 
     options:[
-        "😊 Bình yên",
-        "😟 Lo lắng",
-        "😔 Mệt mỏi",
-        "🔥 Có động lực"
-    ]
+    {
+        text:"😊 Bình yên",
+        score:{peace:2}
+    },
+
+    {
+        text:"😟 Lo lắng",
+        score:{
+            peace:1,
+            philosophy:1
+        }
+    },
+
+    {
+        text:"😴 Mệt mỏi",
+        score:{
+            peace:1,
+            motivation:1
+        }
+    },
+
+    {
+        text:"🔥 Có động lực",
+        score:{
+            motivation:2
+        }
+    }
+]
 },
 
 {
