@@ -2,58 +2,57 @@
 <html lang="vi">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Cuộc trò chuyện đầu tiên</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<title>Chọn hộp</title>
 
 <link rel="stylesheet" href="../style.css">
-
 </head>
 
 <body>
 
 <div class="container">
 
-<p class="step">
+<h1>📦 Chọn chiếc hộp hôm nay</h1>
 
-Bước <span id="currentStep">1</span>/7
-
+<p class="desc">
+Hãy chọn chiếc hộp bạn muốn mở.
 </p>
 
-<div class="progress">
+<button onclick="chooseBox('philosophy')">
+📘 Hộp Triết Lý
+</button>
 
-<div id="progressBar"></div>
+<br><br>
 
-</div>
+<button onclick="chooseBox('love')">
+❤️ Hộp Tình Yêu
+</button>
 
-<h2 id="question">
+<br><br>
 
-Đang tải...
+<button onclick="chooseBox('motivation')">
+💪 Hộp Động Lực
+</button>
 
-</h2>
+<br><br>
 
-<div id="answers">
-
-</div>
-
-<button id="nextBtn">
-
-Tiếp tục
-
+<button onclick="chooseBox('peace')">
+🌿 Hộp Bình Yên
 </button>
 
 </div>
 
-<script src="../data/questions.js"></script>
+<script>
+function chooseBox(type){
 
-<script src="../survey.js"></script>
+localStorage.setItem("boxType", type);
+
+location.href = "ready.html";
+
+}
+</script>
 
 </body>
 
