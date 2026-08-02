@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Chọn Hộp</title>
+
+<link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📦 Chọn chiếc hộp của bạn</h1>
+
+<p class="desc">
+Hãy chọn tâm trạng hoặc điều bạn muốn nhận hôm nay.
+</p>
+
+<div class="boxList">
+
+<button onclick="chooseBox('philosophy')">
+📦 Hộp Triết Lý
+</button>
+
+<button onclick="chooseBox('love')">
+❤️ Hộp Tình Yêu
+</button>
+
+<button onclick="chooseBox('motivation')">
+💪 Hộp Động Lực
+</button>
+
+<button onclick="chooseBox('peace')">
+🌿 Hộp Bình Yên
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+function chooseBox(type){
+
+localStorage.setItem("selectedBox",type);
+
+location.href="ready.html";
+
+}
+
+</script>
+
+</body>
+
+</html>
