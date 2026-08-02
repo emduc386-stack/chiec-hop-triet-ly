@@ -33,6 +33,7 @@ body{
 .boxLogo{
     width:170px;
     transition:.35s;
+    filter:drop-shadow(0 0 0 rgba(255,255,255,0));
 }
 
 h1{
@@ -171,4 +172,12 @@ transform:translateX(-50%) translateY(-90px) scale(1);
     font-weight:bold;
     line-height:1.5;
     margin:20px 0;
+}
+.glow{
+    filter:
+        drop-shadow(0 0 12px #fff)
+        drop-shadow(0 0 24px #ffd54f)
+        drop-shadow(0 0 42px #ffeb3b);
+
+    transform:scale(1.08);
 }
