@@ -8,6 +8,7 @@
 <title>Chọn hộp</title>
 
 <link rel="stylesheet" href="../style.css">
+  <script src="../data/boxSuggest.js"></script>
 </head>
 
 <body>
@@ -49,6 +50,11 @@ onclick="chooseBox('peace')">
 </div>
 
 <script>
+  const answers = JSON.parse(
+    localStorage.getItem("surveyAnswers")
+) || [];
+
+const suggestion = suggestBox(answers);
 function chooseBox(type){
 
 localStorage.setItem("boxType", type);
@@ -56,6 +62,23 @@ localStorage.setItem("boxType", type);
 location.href = "ready.html";
 
 }
+  window.onload = function(){
+
+    const names = {
+        philosophy:"📘 Hộp Triết Lý",
+        love:"❤️ Hộp Tình Yêu",
+        motivation:"💪 Hộp Động Lực",
+        peace:"🌿 Hộp Bình Yên"
+    };
+
+    document.getElementById("suggestText").innerText =
+    "✨ Chúng tôi gợi ý: " + names[suggestion];
+
+    document
+        .getElementById(suggestion + "Btn")
+        .classList.add("recommend");
+
+};
 </script>
 
 </body>
