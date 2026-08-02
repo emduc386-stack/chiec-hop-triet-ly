@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Thông điệp hôm nay</title>
+
+<link rel="stylesheet" href="../box.css">
+
+<script src="../data/messages.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="paperCard">
+
+<h2>✨ Thông điệp dành cho bạn ✨</h2>
+
+<p id="messageText">
+Đang tải...
+</p>
+
+<button onclick="location.href='box.html'">
+Mở hộp khác
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+const randomMessage =
+messages[Math.floor(Math.random()*messages.length)];
+
+document.getElementById("messageText").innerText =
+randomMessage;
+
+</script>
+
+</body>
+
+</html>
