@@ -73,6 +73,7 @@ Mở chiếc hộp
 <script>
 
 const box=document.getElementById("magicBox");
+const boxLid = document.getElementById("boxLid");
 const light=document.getElementById("lightEffect");
 const sparkles=document.getElementById("sparkles");
 const paper=document.getElementById("paper");  
@@ -88,6 +89,12 @@ button.onclick = () => {
     light.classList.add("active");
      paper.classList.add("show");
     box.classList.add("shake");
+    setTimeout(() => {
+
+boxLid.classList.add("open");
+
+},500);
+
 
     setTimeout(() => {
 
