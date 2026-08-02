@@ -287,3 +287,31 @@ z-index:2;
 transform:rotateX(-120deg);
 
 }
+#magicLight{
+
+position:absolute;
+
+left:50%;
+
+top:85px;
+
+width:120px;
+
+height:120px;
+
+transform:translateX(-50%);
+
+border-radius:50%;
+
+background:radial-gradient(circle,
+rgba(255,230,120,.9) 0%,
+rgba(255,210,60,.5) 40%,
+rgba(255,180,0,0) 100%);
+
+opacity:0;
+
+transition:.5s;
+
+pointer-events:none;
+
+}
