@@ -79,7 +79,7 @@ const light=document.getElementById("lightEffect");
 const sparkles=document.getElementById("sparkles");
 const paper=document.getElementById("paper");  
 const button=document.getElementById("openBoxBtn");
-
+const magicLight = document.getElementById("magicLight");
 button.onclick = () => {
 
     button.disabled = true;
@@ -93,7 +93,7 @@ button.onclick = () => {
     setTimeout(() => {
 
 boxLid.classList.add("open");
-
+magicLight.classList.add("show");
 },500);
 
 
