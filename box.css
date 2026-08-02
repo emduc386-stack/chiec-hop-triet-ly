@@ -148,3 +148,9 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 gap:18px;
+.messageText{
+    font-size:32px;
+    font-weight:bold;
+    line-height:1.5;
+    text-align:center;
+}
