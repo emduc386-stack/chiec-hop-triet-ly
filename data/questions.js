@@ -58,13 +58,33 @@ const questions = [
     question:"Điều bạn đang quan tâm nhất là gì?",
 
     type:"focus",
-
-    options:[
-        "📚 Học tập / Công việc",
-        "❤️ Các mối quan hệ",
-        "🌱 Bản thân",
-        "🌍 Tương lai"
-    ]
+options:[
+    {
+        text:"📚 Học tập / Công việc",
+        score:{
+            philosophy:2
+        }
+    },
+    {
+        text:"💖 Các mối quan hệ",
+        score:{
+            love:2
+        }
+    },
+    {
+        text:"🌱 Bản thân",
+        score:{
+            peace:2
+        }
+    },
+    {
+        text:"🌍 Tương lai",
+        score:{
+            motivation:2
+        }
+    }
+]
+    
 },
 
 {
@@ -73,13 +93,33 @@ const questions = [
     question:"Khi gặp khó khăn, bạn thường...",
 
     type:"reaction",
-
-    options:[
-        "💪 Đối mặt ngay",
-        "🤔 Suy nghĩ rất nhiều",
-        "🤝 Tìm người chia sẻ",
-        "🌙 Im lặng một mình"
-    ]
+options:[
+    {
+        text:"😤 Đối mặt ngay",
+        score:{
+            motivation:2
+        }
+    },
+    {
+        text:"🤔 Suy nghĩ rất nhiều",
+        score:{
+            philosophy:2
+        }
+    },
+    {
+        text:"🤝 Tìm người chia sẻ",
+        score:{
+            love:2
+        }
+    },
+    {
+        text:"😶 Im lặng một mình",
+        score:{
+            peace:2
+        }
+    }
+]
+    
 },
 
 {
@@ -90,11 +130,31 @@ const questions = [
     type:"need",
 
     options:[
-        "🌸 Bình yên",
-        "💡 Một góc nhìn mới",
-        "🚀 Động lực",
-        "❤️ Một lời động viên"
-    ]
+    {
+        text:"💙 Bình yên",
+        score:{
+            peace:2
+        }
+    },
+    {
+        text:"🌱 Một góc nhìn mới",
+        score:{
+            philosophy:2
+        }
+    },
+    {
+        text:"🔥 Động lực",
+        score:{
+            motivation:2
+        }
+    },
+    {
+        text:"💗 Một lời động viên",
+        score:{
+            love:2
+        }
+    }
+]
 },
 
 {
@@ -103,12 +163,28 @@ const questions = [
     question:"Bạn thường dành thời gian cho bản thân không?",
 
     type:"selfcare",
-
-    options:[
-        "🟢 Thường xuyên",
-        "🟡 Thỉnh thoảng",
-        "🔴 Rất ít"
-    ]
+options:[
+    {
+        text:"🟢 Thường xuyên",
+        score:{
+            peace:2
+        }
+    },
+    {
+        text:"🟡 Thỉnh thoảng",
+        score:{
+            philosophy:1,
+            peace:1
+        }
+    },
+    {
+        text:"🔴 Rất ít",
+        score:{
+            motivation:2
+        }
+    }
+]
+    
 },
 
 {
@@ -119,11 +195,35 @@ const questions = [
     type:"expect",
 
     options:[
-        "📜 Một câu triết lý",
-        "🌱 Một lời khuyên nhỏ",
-        "✨ Một góc nhìn tích cực",
-        "🤍 Tất cả những điều trên"
-    ]
+    {
+        text:"📖 Một câu triết lý",
+        score:{
+            philosophy:2
+        }
+    },
+    {
+        text:"💖 Một lời khuyên nhỏ",
+        score:{
+            love:2
+        }
+    },
+    {
+        text:"✨ Một góc nhìn tích cực",
+        score:{
+            peace:1,
+            motivation:1
+        }
+    },
+    {
+        text:"🌈 Tất cả những điều trên",
+        score:{
+            philosophy:1,
+            love:1,
+            peace:1,
+            motivation:1
+        }
+    }
+]
 },
 {
     id:7,
@@ -131,13 +231,34 @@ const questions = [
     question:"Nếu có một điều muốn nhắn gửi tới chính mình hôm nay, đó sẽ là gì?",
 
     type:"message",
-
-    options:[
-        "💙 Cố lên nhé",
-        "🌱 Mọi chuyện rồi sẽ ổn",
-        "✨ Tin vào bản thân",
-        "❤️ Mình luôn xứng đáng"
-    ]
+options:[
+    {
+        text:"🌟 Tin vào bản thân",
+        score:{
+            motivation:2
+        }
+    },
+    {
+        text:"❤️ Yêu thương nhiều hơn",
+        score:{
+            love:2
+        }
+    },
+    {
+        text:"🔥 Không bỏ cuộc",
+        score:{
+            motivation:1,
+            philosophy:1
+        }
+    },
+    {
+        text:"🌿 Bình yên mỗi ngày",
+        score:{
+            peace:2
+        }
+    }
+]
+    
 }
 
 ];
