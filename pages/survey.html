@@ -30,7 +30,7 @@
 
 <script>
 let currentQuestion = 0;
-
+let answers = [];
 function loadQuestion(){
 
     const q = questions[currentQuestion];
@@ -55,7 +55,13 @@ function loadQuestion(){
 
         button.innerText=option;
 
-        button.onclick=nextQuestion;
+        button.onclick = function(){
+
+    answers[currentQuestion] = option;
+
+    nextQuestion();
+
+};
 
         options.appendChild(button);
 
@@ -67,11 +73,16 @@ function nextQuestion(){
 
     currentQuestion++;
 
-    if(currentQuestion>=questions.length){
+    if(currentQuestion >= questions.length){
 
-        location.href="choose-box.html";
+    localStorage.setItem(
+        "surveyAnswers",
+        JSON.stringify(answers)
+    );
 
-        return;
+    location.href="choose-box.html";
+
+    return;
 
     }
 
