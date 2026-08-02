@@ -37,9 +37,25 @@ Mở hộp khác
 </div>
 
 <script>
+const randomMessage =
+messages[Math.floor(Math.random() * messages.length)];
 
-document.getElementById("messageText").innerText =
-"Thất bại chỉ là bài học.";
+const messageElement =
+document.getElementById("messageText");
+
+let index = 0;
+let text = "";
+
+function typeWriter() {
+    if (index < randomMessage.length) {
+        text += randomMessage[index];
+        messageElement.textContent = text;
+        index++;
+        setTimeout(typeWriter, 35);
+    }
+}
+
+typeWriter();
 
 </script>
 
