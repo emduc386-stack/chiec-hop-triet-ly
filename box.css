@@ -247,3 +247,38 @@ transform:translateY(-80px) scale(1.4);
     opacity:1;
     transform:translate(-50%,-50%) scale(12);
 }
+.magicBox{
+
+position:relative;
+
+width:220px;
+
+margin:auto;
+
+}
+
+.boxBottom{
+
+width:220px;
+
+display:block;
+
+}
+
+.boxLid{
+
+position:absolute;
+
+left:0;
+
+top:-8px;
+
+width:220px;
+
+transform-origin:center bottom;
+
+transition:.6s ease;
+
+z-index:2;
+
+}
