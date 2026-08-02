@@ -315,3 +315,10 @@ transition:.5s;
 pointer-events:none;
 
 }
+#magicLight.show{
+
+opacity:1;
+
+transform:translateX(-50%) scale(1.4);
+
+}
