@@ -39,10 +39,28 @@ Mở hộp khác
 <script>
 
 const randomMessage =
-messages[Math.floor(Math.random()*messages.length)];
+messages[Math.floor(Math.random() * messages.length)];
 
-document.getElementById("messageText").innerText =
-randomMessage;
+const messageElement =
+document.getElementById("messageText");
+
+let index = 0;
+
+function typeWriter() {
+
+    if (index < randomMessage.length) {
+
+        messageElement.innerText += randomMessage.charAt(index);
+
+        index++;
+
+        setTimeout(typeWriter, 35);
+
+    }
+
+}
+
+typeWriter();
 
 </script>
 
