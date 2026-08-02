@@ -102,7 +102,6 @@ const questions = [
         "🤍 Tất cả những điều trên"
     ]
 },
-
 {
     id:7,
 
@@ -110,9 +109,12 @@ const questions = [
 
     type:"message",
 
-    input:true,
-
-    placeholder:"Ví dụ: Mình hy vọng sẽ mạnh mẽ hơn..."
+    options:[
+        "💙 Cố lên nhé",
+        "🌱 Mọi chuyện rồi sẽ ổn",
+        "✨ Tin vào bản thân",
+        "❤️ Mình luôn xứng đáng"
+    ]
 }
 
 ];
