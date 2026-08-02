@@ -282,3 +282,8 @@ transition:.6s ease;
 z-index:2;
 
 }
+.boxLid.open{
+
+transform:rotateX(-120deg);
+
+}
