@@ -59,7 +59,29 @@ if(savedDate === today && savedIndex !== null){
 }
 
 const randomMessage = messages[randomIndex];
+const history =
+JSON.parse(localStorage.getItem("messageHistory")) || [];
+ history.unshift({
 
+    date: today,
+
+    type: localStorage.getItem("boxType"),
+
+    message: randomMessage
+
+});
+    if(history.length > 50){
+
+    history.length = 50;
+
+    }
+    localStorage.setItem(
+
+    "messageHistory",
+
+    JSON.stringify(history)
+
+);
 const messageElement =
 document.getElementById("messageText");
 
