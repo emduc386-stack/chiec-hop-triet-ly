@@ -505,3 +505,40 @@ transition:.3s;
     font-size:20px;
 
 }
+.scoreTitle{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:8px;
+
+}
+
+.progress{
+
+    width:100%;
+
+    height:12px;
+
+    background:#ffffff22;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+}
+
+.progressFill{
+
+    width:0%;
+
+    height:100%;
+
+    background:linear-gradient(90deg,#FFD54F,#FF9800);
+
+    border-radius:20px;
+
+    transition:width 1s ease;
+
+}
