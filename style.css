@@ -580,4 +580,12 @@ transition:.3s;
     background:#4CAF50;
 
 }
-    
+  .recommendCard{
+
+    transform:scale(1.03);
+
+    box-shadow:0 0 25px rgba(255,215,0,.35);
+
+    transition:.35s;
+
+  }  
