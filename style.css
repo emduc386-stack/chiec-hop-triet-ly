@@ -535,8 +535,40 @@ transition:.3s;
 
     height:100%;
 
-    background:linear-gradient(90deg,#FFD54F,#FF9800);
+    .progressFill{
 
+    width:0%;
+
+    height:100%;
+
+    border-radius:20px;
+
+    transition:width .2s linear;
+
+    }
+#philosophyBar{
+
+    background:#4A90E2;
+
+}
+
+#loveBar{
+
+    background:#FF5A8A;
+
+}
+
+#motivationBar{
+
+    background:#FF9800;
+
+}
+
+#peaceBar{
+
+    background:#4CAF50;
+
+}
     border-radius:20px;
 
     transition:width 1s ease;
