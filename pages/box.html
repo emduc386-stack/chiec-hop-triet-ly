@@ -113,8 +113,9 @@ button.onclick = () => {
     button.disabled = true;
    box.classList.add("glow");
     sparkles.classList.add("sparkle");
-    button.innerText = "Đang mở...";
-
+    button.innerText = "✨ Đang mở...";
+    button.style.opacity = "0.8";
+button.style.transform = "scale(0.96)";
     light.classList.add("active");
      paper.classList.add("show");
     box.classList.add("shake");
@@ -131,7 +132,8 @@ magicLight.classList.add("show");
 
     }, 500);
 setTimeout(() => {
-
+button.style.transform = "scale(1)";
+button.style.opacity = "1";
     window.location.href = "result.html";
 
 }, 1800);
