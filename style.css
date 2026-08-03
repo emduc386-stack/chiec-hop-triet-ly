@@ -486,30 +486,20 @@ transition:.3s;
 
 .scoreItem{
 
-    
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    padding:18px;
+
+    border-radius:20px;
 
     background:#ffffff15;
-
-    border-radius:16px;
-
-    padding:16px;
-
-    margin:14px 0;
-
-    }
-    padding:12px 16px;
-
-    margin:10px 0;
-
-    border-radius:12px;
-
-    background:#ffffff15;
-
-    color:white;
-
-    font-size:20px;
 
 }
+
 .scoreTitle{
 
     display:flex;
@@ -523,6 +513,13 @@ transition:.3s;
     font-weight:bold;
 
     margin-bottom:12px;
+
+}
+.scoreItem button{
+
+    margin-top:15px;
+
+    width:100%;
 
 }
 .scoreTitle span:first-child{
@@ -632,5 +629,16 @@ transition:.3s;
     color:#FFD54F;
 
     margin-bottom:10px;
+
+}
+.scoreGrid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:18px;
+
+    margin-top:25px;
 
 }
