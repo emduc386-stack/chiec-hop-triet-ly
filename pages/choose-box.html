@@ -146,17 +146,52 @@ function percent(value){
 
 }
 
-document.getElementById("philosophyScore").innerText =
-percent(scores.philosophy)+"%";
+const result = {
 
-document.getElementById("loveScore").innerText =
-percent(scores.love)+"%";
+    philosophy: percent(scores.philosophy),
 
-document.getElementById("motivationScore").innerText =
-percent(scores.motivation)+"%";
+    love: percent(scores.love),
 
-document.getElementById("peaceScore").innerText =
-percent(scores.peace)+"%";
+    motivation: percent(scores.motivation),
+
+    peace: percent(scores.peace)
+
+};
+
+animateScore("philosophy", result.philosophy);
+
+animateScore("love", result.love);
+
+animateScore("motivation", result.motivation);
+
+animateScore("peace", result.peace);
+  function animateScore(name,target){
+
+    let value = 0;
+
+    const score =
+    document.getElementById(name+"Score");
+
+    const bar =
+    document.getElementById(name+"Bar");
+
+    const timer = setInterval(function(){
+
+        value++;
+
+        score.innerText = value + "%";
+
+        bar.style.width = value + "%";
+
+        if(value>=target){
+
+            clearInterval(timer);
+
+        }
+
+    },15);
+
+  }
 </script>
 
 </body>
