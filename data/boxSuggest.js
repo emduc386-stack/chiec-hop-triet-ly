@@ -34,3 +34,27 @@ function suggestBox(answers){
     return best;
 
 }
+function calculateScores(answers){
+
+    const scores = {
+        philosophy:0,
+        love:0,
+        motivation:0,
+        peace:0
+    };
+
+    answers.forEach(answer=>{
+
+        if(!answer.score) return;
+
+        for(const key in answer.score){
+
+            scores[key] += answer.score[key];
+
+        }
+
+    });
+
+    return scores;
+
+}
