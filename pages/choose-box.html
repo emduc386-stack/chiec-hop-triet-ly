@@ -15,119 +15,91 @@
 
 <div class="container">
 
-<h1>📦 Chọn chiếc hộp hôm nay</h1>
-<p id="suggestText"></p>
-  <div id="scoreBoard">
+    <h1>📦 Chọn chiếc hộp hôm nay</h1>
 
-  
+    <p id="suggestText"></p>
 
-    <div class="scoreItem" id="philosophyCard">
+    <div id="scoreBoard">
 
-        <div class="scoreTitle">
+        <!-- Triết Lý -->
+        <div class="scoreItem" id="philosophyCard">
 
-            <span>📘 Triết Lý</span>
+            <div class="scoreTitle">
+                <span>📘 Triết Lý</span>
+                <span id="philosophyScore">0%</span>
+            </div>
 
-            <span id="philosophyScore">0%</span>
+            <div class="progress">
+                <div id="philosophyBar" class="progressFill"></div>
+            </div>
+
+            <button id="philosophyBtn"
+                    onclick="chooseBox('philosophy')">
+                📘 Hộp Triết Lý
+            </button>
 
         </div>
 
-        <div class="progress">
+        <!-- Tình Yêu -->
+        <div class="scoreItem" id="loveCard">
 
-            <div id="philosophyBar"
-                 class="progressFill"></div>
+            <div class="scoreTitle">
+                <span>❤️ Tình Yêu</span>
+                <span id="loveScore">0%</span>
+            </div>
+
+            <div class="progress">
+                <div id="loveBar" class="progressFill"></div>
+            </div>
+
+            <button id="loveBtn"
+                    onclick="chooseBox('love')">
+                ❤️ Hộp Tình Yêu
+            </button>
+
+        </div>
+
+        <!-- Động Lực -->
+        <div class="scoreItem" id="motivationCard">
+
+            <div class="scoreTitle">
+                <span>💪 Động Lực</span>
+                <span id="motivationScore">0%</span>
+            </div>
+
+            <div class="progress">
+                <div id="motivationBar" class="progressFill"></div>
+            </div>
+
+            <button id="motivationBtn"
+                    onclick="chooseBox('motivation')">
+                💪 Hộp Động Lực
+            </button>
+
+        </div>
+
+        <!-- Bình Yên -->
+        <div class="scoreItem" id="peaceCard">
+
+            <div class="scoreTitle">
+                <span>🌿 Bình Yên</span>
+                <span id="peaceScore">0%</span>
+            </div>
+
+            <div class="progress">
+                <div id="peaceBar" class="progressFill"></div>
+            </div>
+
+            <button id="peaceBtn"
+                    onclick="chooseBox('peace')">
+                🌿 Hộp Bình Yên
+            </button>
 
         </div>
 
     </div>
 
-
-    <div class="scoreItem" id="loveCard">
-
-        <div class="scoreTitle">
-
-            <span>❤️ Tình Yêu</span>
-
-            <span id="loveScore">0%</span>
-
-        </div>
-
-        <div class="progress">
-
-            <div id="loveBar"
-                 class="progressFill"></div>
-
-        </div>
-
-    </div>
-
-
-   <div class="scoreItem" id="motivationCard">
-
-        <div class="scoreTitle">
-
-            <span>💪 Động Lực</span>
-
-            <span id="motivationScore">0%</span>
-
-        </div>
-
-        <div class="progress">
-
-            <div id="motivationBar"
-                 class="progressFill"></div>
-
-        </div>
-
-    </div>
-
-
-    <div class="scoreItem" id="peaceCard">
-
-        <div class="scoreTitle">
-
-            <span>🌿 Bình Yên</span>
-
-            <span id="peaceScore">0%</span>
-
-        </div>
-
-        <div class="progress">
-
-            <div id="peaceBar"
-                 class="progressFill"></div>
-
-        </div>
-
-    </div>
-<br>
-
-<button id="philosophyBtn"
-onclick="chooseBox('philosophy')">
-📘 Hộp Triết Lý
-</button>
-
-<br><br>
-
-<button id="loveBtn"
-onclick="chooseBox('love')">
-❤️ Hộp Tình Yêu
-</button>
-
-<br><br>
-
-<button id="motivationBtn"
-onclick="chooseBox('motivation')">
-💪 Hộp Động Lực
-</button>
-
-<br><br>
-
-<button id="peaceBtn"
-onclick="chooseBox('peace')">
-🌿 Hộp Bình Yên
-</button>
-
-  </div>
+</div>
     
 <script>
   const answers = JSON.parse(
