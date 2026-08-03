@@ -589,3 +589,27 @@ transition:.3s;
     transition:.35s;
 
   }  
+.recommendBar{
+
+    box-shadow:
+        0 0 8px currentColor,
+        0 0 16px currentColor;
+
+    animation: glow 1.5s infinite alternate;
+
+}
+@keyframes glow{
+
+    from{
+
+        filter:brightness(1);
+
+    }
+
+    to{
+
+        filter:brightness(1.4);
+
+    }
+
+}
