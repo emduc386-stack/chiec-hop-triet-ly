@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Lịch sử thông điệp</title>
+
+<link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📖 Lịch sử thông điệp</h1>
+
+<div id="historyList">
+
+Đang tải...
+
+</div>
+
+<br>
+
+<button onclick="location.href='box.html'">
+
+📦 Mở hộp
+
+</button>
+
+</div>
+
+<script>
+
+const history =
+JSON.parse(localStorage.getItem("messageHistory")) || [];
+
+const list =
+document.getElementById("historyList");
+
+if(history.length===0){
+
+    list.innerHTML="<p>Chưa có thông điệp nào.</p>";
+
+}else{
+
+    list.innerHTML="";
+
+    history.forEach(item=>{
+
+        list.innerHTML += `
+        <div class="historyCard">
+
+            <h3>${item.date}</h3>
+
+            <p>${item.message}</p>
+
+        </div>
+        `;
+
+    });
+
+}
+
+</script>
+
+</body>
+
+</html>
