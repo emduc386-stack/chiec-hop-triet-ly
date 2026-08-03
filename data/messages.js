@@ -1,12 +1,19 @@
-const messages = [
-  "Hôm nay là một cơ hội mới.",
-  "Đừng so sánh mình với người khác.",
-  "Tiến chậm vẫn tốt hơn đứng yên.",
-  "Mọi khó khăn rồi sẽ qua.",
-  "Hãy tin vào bản thân.",
-  "Mỗi ngày hãy học một điều mới.",
-  "Sự kiên trì luôn có giá trị.",
-  "Bạn mạnh mẽ hơn bạn nghĩ.",
-  "Thất bại chỉ là bài học.",
-  "Đừng quên mỉm cười hôm nay."
-];
+const messages = {
+
+    philosophy:[
+"Mọi câu trả lời đều bắt đầu từ việc đặt đúng câu hỏi.",
+"Kiên nhẫn là trí tuệ đang chờ thời điểm."
+],
+    love:[
+"Hãy yêu bản thân trước khi yêu người khác.",
+"Một lời quan tâm đôi khi đáng giá hơn ngàn món quà."
+],
+    motivation:[
+"Hôm nay cố gắng hơn hôm qua 1%.",
+"Bạn mạnh hơn bạn nghĩ."
+],
+    peace:[
+"Hãy dành vài phút hít thở thật sâu.",
+"Bình yên bắt đầu từ bên trong."
+],
+};
