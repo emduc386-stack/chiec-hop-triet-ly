@@ -71,27 +71,31 @@ if(savedDate === today && savedIndex !== null){
 const randomMessage = currentMessages[randomIndex];
 const history =
 JSON.parse(localStorage.getItem("messageHistory")) || [];
- history.unshift({
 
-    date: today,
+const last = history[0];
 
-    type: localStorage.getItem("boxType"),
+if(
+    !last ||
+    last.date !== today ||
+    last.type !== boxType ||
+    last.message !== randomMessage
+){
 
-    message: randomMessage
+    history.unshift({
+        date: today,
+        type: boxType,
+        message: randomMessage
+    });
 
-});
     if(history.length > 50){
-
-    history.length = 50;
-
+        history.length = 50;
     }
+
     localStorage.setItem(
-
-    "messageHistory",
-
-    JSON.stringify(history)
-
-);
+        "messageHistory",
+        JSON.stringify(history)
+    );
+}
 const messageElement =
 document.getElementById("messageText");
 
