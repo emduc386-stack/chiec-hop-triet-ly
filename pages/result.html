@@ -37,20 +37,29 @@ Mở hộp khác
 </div>
 
 <script>
+  const boxType = localStorage.getItem("boxType");
+const currentMessages = messages[boxType];  
 const today = new Date().toDateString();
 
 let savedDate = localStorage.getItem("messageDate");
 let savedIndex = localStorage.getItem("messageIndex");
 
 let randomIndex;
+if(savedIndex !== null &&
+   Number(savedIndex) >= currentMessages.length){
 
+    savedIndex = null;
+
+}
 if(savedDate === today && savedIndex !== null){
 
     randomIndex = Number(savedIndex);
 
 }else{
 
-    randomIndex = Math.floor(Math.random() * messages.length);
+    randomIndex = Math.floor(
+    Math.random() * currentMessages.length
+);
 
     localStorage.setItem("messageDate", today);
 
@@ -58,7 +67,8 @@ if(savedDate === today && savedIndex !== null){
 
 }
 
-const randomMessage = messages[randomIndex];
+
+const randomMessage = currentMessages[randomIndex];
 const history =
 JSON.parse(localStorage.getItem("messageHistory")) || [];
  history.unshift({
