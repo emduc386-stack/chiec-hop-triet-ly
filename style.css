@@ -528,14 +528,7 @@ transition:.3s;
     overflow:hidden;
 
 }
-
 .progressFill{
-
-    width:0%;
-
-    height:100%;
-
-    .progressFill{
 
     width:0%;
 
@@ -543,9 +536,10 @@ transition:.3s;
 
     border-radius:20px;
 
-    transition:width .2s linear;
+    transition:width 1s ease;
 
-    }
+}
+
 #philosophyBar{
 
     background:#4A90E2;
@@ -569,8 +563,4 @@ transition:.3s;
     background:#4CAF50;
 
 }
-    border-radius:20px;
-
-    transition:width 1s ease;
-
-}
+    
