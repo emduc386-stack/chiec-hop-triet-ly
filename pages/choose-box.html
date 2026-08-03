@@ -19,59 +19,88 @@
 <p id="suggestText"></p>
   <div id="scoreBoard">
 
-    <div class="scoreItem">
-        <span>📘 Triết Lý</span>
-        <span id="philosophyScore">0%</span>
-    </div>
+  
 
     <div class="scoreItem">
-        <span>❤️ Tình Yêu</span>
-        <span id="loveScore">0%</span>
+
+        <div class="scoreTitle">
+
+            <span>📘 Triết Lý</span>
+
+            <span id="philosophyScore">0%</span>
+
+        </div>
+
+        <div class="progress">
+
+            <div id="philosophyBar"
+                 class="progressFill"></div>
+
+        </div>
+
     </div>
+
 
     <div class="scoreItem">
-        <span>💪 Động Lực</span>
-        <span id="motivationScore">0%</span>
+
+        <div class="scoreTitle">
+
+            <span>❤️ Tình Yêu</span>
+
+            <span id="loveScore">0%</span>
+
+        </div>
+
+        <div class="progress">
+
+            <div id="loveBar"
+                 class="progressFill"></div>
+
+        </div>
+
     </div>
+
 
     <div class="scoreItem">
-        <span>🌿 Bình Yên</span>
-        <span id="peaceScore">0%</span>
+
+        <div class="scoreTitle">
+
+            <span>💪 Động Lực</span>
+
+            <span id="motivationScore">0%</span>
+
+        </div>
+
+        <div class="progress">
+
+            <div id="motivationBar"
+                 class="progressFill"></div>
+
+        </div>
+
     </div>
 
-  </div>
-<p class="desc">
-Hãy chọn chiếc hộp bạn muốn mở.
-</p>
 
-<button id="philosophyBtn"
-onclick="chooseBox('philosophy')">
-📘 Hộp Triết Lý
-</button>
+    <div class="scoreItem">
 
-<br><br>
-<button id="loveBtn"
-onclick="chooseBox('love')">
-❤️ Hộp Tình Yêu
-</button>
+        <div class="scoreTitle">
 
+            <span>🌿 Bình Yên</span>
 
-<br><br>
+            <span id="peaceScore">0%</span>
 
-<button id="motivationBtn"
-onclick="chooseBox('motivation')">
-💪 Hộp Động Lực
-</button>
+        </div>
 
-<br><br>
-<button id="peaceBtn"
-onclick="chooseBox('peace')">
-🌿 Hộp Bình Yên
-</button>
+        <div class="progress">
 
+            <div id="peaceBar"
+                 class="progressFill"></div>
 
-</div>
+        </div>
 
+    </div>
+
+    
 <script>
   const answers = JSON.parse(
     localStorage.getItem("surveyAnswers")
