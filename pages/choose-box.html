@@ -78,6 +78,7 @@ onclick="chooseBox('peace')">
 ) || [];
 
 const suggestion = suggestBox(answers);
+  const scores = calculateScores(answers);
 function chooseBox(type){
 
 localStorage.setItem("boxType", type);
@@ -102,6 +103,31 @@ location.href = "ready.html";
         .classList.add("recommend");
 
 };
+  const total =
+scores.philosophy +
+scores.love +
+scores.motivation +
+scores.peace;
+
+function percent(value){
+
+    if(total===0) return 0;
+
+    return Math.round(value/total*100);
+
+}
+
+document.getElementById("philosophyScore").innerText =
+percent(scores.philosophy)+"%";
+
+document.getElementById("loveScore").innerText =
+percent(scores.love)+"%";
+
+document.getElementById("motivationScore").innerText =
+percent(scores.motivation)+"%";
+
+document.getElementById("peaceScore").innerText =
+percent(scores.peace)+"%";
 </script>
 
 </body>
