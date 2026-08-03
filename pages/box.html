@@ -54,8 +54,8 @@ content="width=device-width, initial-scale=1.0">
     </div>
 </div>
 
+<h1 id="boxTitle">📦 Chiếc Hộp</h1>
 
-<h1>Chiếc Hộp Triết Lý</h1>
 
 <p class="desc">
 
@@ -75,6 +75,17 @@ Mở chiếc hộp
 
 const box=document.getElementById("magicBox");
 const boxLid = document.getElementById("boxLid");
+ const boxType = localStorage.getItem("boxType");
+
+const titles = {
+    philosophy: "📘 Chiếc Hộp Triết Lý",
+    love: "❤️ Chiếc Hộp Tình Yêu",
+    motivation: "💪 Chiếc Hộp Động Lực",
+    peace: "🌿 Chiếc Hộp Bình Yên"
+};
+
+document.getElementById("boxTitle").innerText =
+titles[boxType];   
 const light=document.getElementById("lightEffect");
 const sparkles=document.getElementById("sparkles");
 const paper=document.getElementById("paper");  
