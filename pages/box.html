@@ -76,7 +76,12 @@ Mở chiếc hộp
 const box=document.getElementById("magicBox");
 const boxLid = document.getElementById("boxLid");
  const boxType = localStorage.getItem("boxType");
-
+const colors = {
+    philosophy: "#4A90E2",
+    love: "#FF5A8A",
+    motivation: "#FF9800",
+    peace: "#4CAF50"
+};
 const titles = {
     philosophy: "📘 Chiếc Hộp Triết Lý",
     love: "❤️ Chiếc Hộp Tình Yêu",
@@ -85,7 +90,11 @@ const titles = {
 };
 
 document.getElementById("boxTitle").innerText =
-titles[boxType];   
+titles[boxType];  
+   document.documentElement.style.setProperty(
+    "--boxColor",
+    colors[boxType]
+); 
 const light=document.getElementById("lightEffect");
 const sparkles=document.getElementById("sparkles");
 const paper=document.getElementById("paper");  
