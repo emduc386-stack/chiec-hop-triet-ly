@@ -76,6 +76,12 @@ Mở chiếc hộp
 const box=document.getElementById("magicBox");
 const boxLid = document.getElementById("boxLid");
  const boxType = localStorage.getItem("boxType");
+   const buttonNames = {
+    philosophy: "📘 Mở Hộp Triết Lý",
+    love: "❤️ Mở Hộp Tình Yêu",
+    motivation: "💪 Mở Hộp Động Lực",
+    peace: "🌿 Mở Hộp Bình Yên"
+}; 
 const colors = {
     philosophy: "#4A90E2",
     love: "#FF5A8A",
@@ -91,6 +97,8 @@ const titles = {
 
 document.getElementById("boxTitle").innerText =
 titles[boxType];  
+ document.getElementById("openBoxBtn").innerText =
+buttonNames[boxType];   
    document.documentElement.style.setProperty(
     "--boxColor",
     colors[boxType]
