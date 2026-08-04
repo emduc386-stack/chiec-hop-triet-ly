@@ -51,5 +51,29 @@ Cài đặt
 </div>
 
 `);
+const links = document.querySelectorAll(".bottomNav a");
 
+links.forEach(link=>{
+
+    link.addEventListener("click",function(e){
+
+        const href = this.getAttribute("href");
+
+        if(href==="#" || href===""){
+            return;
+        }
+
+        e.preventDefault();
+
+        document.body.classList.add("fadeOut");
+
+        setTimeout(function(){
+
+            location.href = href;
+
+        },350);
+
+    });
+
+});
 });
