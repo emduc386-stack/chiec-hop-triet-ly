@@ -47,7 +47,7 @@ Cài đặt
 <h1>📖 Lịch sử thông điệp</h1>
 
 
-<button onclick="clearHistory()" class="deleteBtn">
+<button onclick="openPopup()" class="deleteBtn">
 🗑 Xóa lịch sử
 </button>
 
@@ -176,18 +176,31 @@ function openHistory(index){
     "history-detail.html";
 
 }
-    function clearHistory(){
-
-    if(confirm("Bạn có chắc muốn xóa toàn bộ lịch sử?")){
-
-        localStorage.removeItem("messageHistory");
-
-        location.reload();
-
-    }
-
-    }
+    
     window.openHistory = openHistory;
+    function openPopup(){
+
+    document
+    .getElementById("deletePopup")
+    .classList.add("show");
+
+}
+
+function closePopup(){
+
+    document
+    .getElementById("deletePopup")
+    .classList.remove("show");
+
+}
+
+function confirmDelete(){
+
+    localStorage.removeItem("messageHistory");
+
+    location.reload();
+
+}
 </script>
 
 </body>
