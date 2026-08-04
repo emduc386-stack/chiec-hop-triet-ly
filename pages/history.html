@@ -13,13 +13,10 @@
 </head>
 
 <body>
-</head>
 
-<body>
 
-<div class="container">
-...
-</div>
+
+
 
 <div class="bottomNav">
 
@@ -45,7 +42,6 @@ Cài đặt
 
 </div>
 
-</body>
 <div class="container">
 
 <h1>📖 Lịch sử thông điệp</h1>
@@ -82,7 +78,7 @@ if(history.length===0){
 
     list.innerHTML="";
 
-    history.forEach(item=>{
+    history.forEach((item,index)=>{
 
     const icons = {
         philosophy:"📘",
@@ -100,7 +96,8 @@ if(history.length===0){
 
     list.innerHTML += `
 
-    <div class="historyCard">
+    <div class="historyCard"
+onclick="openHistory(${index})">
 
         <div class="historyDate">
             ${item.date}
