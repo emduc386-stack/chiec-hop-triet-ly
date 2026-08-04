@@ -84,18 +84,42 @@ if(history.length===0){
 
     history.forEach(item=>{
 
-        list.innerHTML += `
-        <div class="historyCard">
+    const icons = {
+        philosophy:"📘",
+        love:"❤️",
+        motivation:"💪",
+        peace:"🌿"
+    };
 
-            <h3>${item.date}</h3>
+    const names = {
+        philosophy:"Triết Lý",
+        love:"Tình Yêu",
+        motivation:"Động Lực",
+        peace:"Bình Yên"
+    };
 
-            <p>${item.message}</p>
+    list.innerHTML += `
 
+    <div class="historyCard">
+
+        <div class="historyDate">
+            ${item.date}
         </div>
-        `;
 
-    });
+        <div class="historyType">
+            ${icons[item.type]}<br>
+            ${names[item.type]}
+        </div>
 
+        <div class="historyMessage">
+            ${item.message}
+        </div>
+
+    </div>
+
+    `;
+
+});
 }
 
 </script>
