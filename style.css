@@ -1003,3 +1003,18 @@ opacity:1;
 }
 
 }
+/* ===== Build 020.1 Fix Choose Box Mobile ===== */
+
+#boxSelection{
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+.boxGrid{
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
