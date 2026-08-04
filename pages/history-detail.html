@@ -53,28 +53,26 @@ JSON.parse(localStorage.getItem("messageHistory")) || [];
 const index =
 Number(localStorage.getItem("historyIndex"));
 
+if (
+    isNaN(index) ||
+    index < 0 ||
+    index >= history.length
+){
+    location.href = "history.html";
+}
+
 const item = history[index];
 
-document.getElementById("detailDate")
-.innerText = item.date;
-
 const names = {
-
-philosophy:"📘 Hộp Triết Lý",
-
-love:"❤️ Hộp Tình Yêu",
-
-motivation:"💪 Hộp Động Lực",
-
-peace:"🌿 Hộp Bình Yên"
-
+    philosophy:"📘 Hộp Triết Lý",
+    love:"❤️ Hộp Tình Yêu",
+    motivation:"💪 Hộp Động Lực",
+    peace:"🌿 Hộp Bình Yên"
 };
 
-document.getElementById("detailType")
-.innerText = names[item.type];
-
-document.getElementById("detailMessage")
-.innerText = item.message;
+document.getElementById("detailDate").innerText = item.date;
+document.getElementById("detailType").innerText = names[item.type];
+document.getElementById("detailMessage").innerText = item.message;
 
 </script>
 
