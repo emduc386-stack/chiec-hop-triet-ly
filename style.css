@@ -1018,3 +1018,13 @@ opacity:1;
     max-width: 100%;
     box-sizing: border-box;
 }
+/* ===== Build 020.2 ===== */
+
+body{
+    opacity:1;
+    transition:opacity .35s ease;
+}
+
+body.fadeOut{
+    opacity:0;
+}
