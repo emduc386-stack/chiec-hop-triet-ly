@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Chi tiết thông điệp</title>
+
+<link rel="stylesheet"
+href="../style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="paperCard">
+
+<h2 id="detailTitle">
+📖 Thông điệp
+</h2>
+
+<p id="detailDate"></p>
+
+<p id="detailType"></p>
+
+<p id="detailMessage"
+class="messageText">
+</p>
+
+<br>
+
+<button
+onclick="location.href='history.html'">
+
+⬅ Quay lại
+
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+const history =
+JSON.parse(localStorage.getItem("messageHistory")) || [];
+
+const index =
+Number(localStorage.getItem("historyIndex"));
+
+const item = history[index];
+
+document.getElementById("detailDate")
+.innerText = item.date;
+
+const names = {
+
+philosophy:"📘 Hộp Triết Lý",
+
+love:"❤️ Hộp Tình Yêu",
+
+motivation:"💪 Hộp Động Lực",
+
+peace:"🌿 Hộp Bình Yên"
+
+};
+
+document.getElementById("detailType")
+.innerText = names[item.type];
+
+document.getElementById("detailMessage")
+.innerText = item.message;
+
+</script>
+
+</body>
+
+</html>
