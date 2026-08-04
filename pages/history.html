@@ -152,6 +152,17 @@ function openHistory(index){
     "history-detail.html";
 
 }
+    function clearHistory(){
+
+    if(confirm("Bạn có chắc muốn xóa toàn bộ lịch sử?")){
+
+        localStorage.removeItem("messageHistory");
+
+        location.reload();
+
+    }
+
+    }
     window.openHistory = openHistory;
 </script>
 
