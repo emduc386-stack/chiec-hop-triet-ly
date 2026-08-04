@@ -849,3 +849,28 @@ cursor:pointer;
     }
 
 }
+.deleteBtn{
+
+background:#ff5252;
+
+color:white;
+
+padding:16px 28px;
+
+border:none;
+
+border-radius:14px;
+
+font-size:18px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.deleteBtn:hover{
+
+background:#ff3030;
+
+}
