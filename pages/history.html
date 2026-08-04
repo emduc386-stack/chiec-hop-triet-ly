@@ -96,8 +96,10 @@ if(history.length===0){
 
     list.innerHTML += `
 
-    <div class="historyCard"
-onclick="openHistory(${index})">
+<div class="historyCard"
+onclick="openHistory(${index})"
+style="animation-delay:${index*0.08}s">
+
 
         <div class="historyDate">
             ${item.date}
