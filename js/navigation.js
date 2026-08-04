@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-
+document.body.classList.add("fadeIn");
     const path = window.location.pathname;
 
     let prefix = "";
