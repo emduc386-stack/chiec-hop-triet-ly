@@ -121,7 +121,17 @@ if(history.length===0){
 
 });
 }
+function openHistory(index){
 
+    localStorage.setItem(
+        "historyIndex",
+        index
+    );
+
+    location.href =
+    "history-detail.html";
+
+}
 </script>
 
 </body>
