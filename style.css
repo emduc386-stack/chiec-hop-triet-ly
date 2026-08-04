@@ -823,3 +823,24 @@ cursor:pointer;
     -webkit-box-orient:vertical;
     overflow:hidden;
 }
+/* ===== Build 019.2 ===== */
+
+.historyCard{
+    opacity:0;
+    transform:translateY(30px);
+    animation:historyFade .45s ease forwards;
+}
+
+@keyframes historyFade{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
