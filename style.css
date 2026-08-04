@@ -699,3 +699,20 @@ transition:.3s;
     transform:translateY(-3px);
 
 }
+.navItem.active{
+
+    color:#ffd54f;
+
+}
+
+.navItem.active span{
+
+    transform:scale(1.15);
+
+}
+
+.navItem.active{
+
+    font-weight:bold;
+
+}
