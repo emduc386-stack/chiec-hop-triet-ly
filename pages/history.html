@@ -98,7 +98,7 @@ if(history.length===0){
 
 <div class="historyCard"
 onclick="openHistory(${index})"
-style="animation-delay:${index*0.08}s">
+
 
 
         <div class="historyDate">
@@ -118,6 +118,13 @@ style="animation-delay:${index*0.08}s">
 
     `;
 
+});
+    const cards = document.querySelectorAll(".historyCard");
+
+cards.forEach((card,index)=>{
+    setTimeout(()=>{
+        card.classList.add("show");
+    }, index * 120);
 });
 }
 function openHistory(index){
