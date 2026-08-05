@@ -68,10 +68,15 @@ Mở hộp khác
 </div>
 
 <script>
-  const boxType = localStorage.getItem("boxType");
-const currentMessages = messages[boxType];  
+  
 const today = new Date().toDateString();
+const boxType = localStorage.getItem("boxType") || "philosophy";
 
+const currentMessages = messages[boxType];
+
+if(!currentMessages){
+    location.href = "choose-box.html";
+}
 let savedDate = localStorage.getItem("messageDate");
 let savedIndex = localStorage.getItem("messageIndex");
 
