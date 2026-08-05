@@ -46,7 +46,9 @@ Mở hộp khác
 </div>
 
 <script>
-  
+  window.onerror = function(message, source, line){
+    alert(message + " (dòng " + line + ")");
+};
 const today = new Date().toDateString();
 const boxType = localStorage.getItem("boxType") || "philosophy";
 
