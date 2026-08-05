@@ -21,10 +21,8 @@ src="../assets/images/box.svg"
 class="boxLogo"
 alt="Chiếc Hộp Triết Lý">
 
-<h2>
-
-Chiếc Hộp Triết Lý
-
+<h2 id="readyTitle">
+Đang chuẩn bị...
 </h2>
 
 <p class="desc">
@@ -55,7 +53,21 @@ onclick="location.href='../index.html'">
 </button>
 
 </div>
+<script>
 
+const type = localStorage.getItem("boxType");
+
+const names = {
+    philosophy:"📘 Hộp Triết Lý",
+    love:"❤️ Hộp Tình Yêu",
+    motivation:"💪 Hộp Động Lực",
+    peace:"🌿 Hộp Bình Yên"
+};
+
+document.getElementById("readyTitle").innerText =
+names[type] || "📦 Chiếc Hộp";
+
+</script>
 </body>
 
 </html>
