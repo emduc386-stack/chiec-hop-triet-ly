@@ -53,7 +53,7 @@ const today = new Date().toDateString();
 const boxType = localStorage.getItem("boxType") || "philosophy";
 
 const currentMessages = messages[boxType];
-
+alert("1");
 if(!currentMessages){
     location.href = "choose-box.html";
 }
@@ -85,6 +85,7 @@ if(savedDate === today && savedIndex !== null){
 
 
 const randomMessage = currentMessages[randomIndex];
+  alert("2");
 const history =
 JSON.parse(localStorage.getItem("messageHistory")) || [];
 
@@ -128,7 +129,7 @@ function typeWriter() {
 }
 
 typeWriter();
-
+alert("3");
 </script>
 <script src="../js/navigation.js"></script>
 </body>
